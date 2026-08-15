@@ -12,6 +12,9 @@ fresh history with no link back to the template.
 In `README.md` update: 
 
 - `[Project name]`
+
+In `README.md` abd `SETUP.md` update: 
+
 - all instances of `<project>`
 
 In `pyproject.toml`, update:
