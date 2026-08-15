@@ -1,0 +1,8 @@
+layout:
+  site_name: Project name
+  build: Build version 0.0.1
+home:
+  title: Home
+  call_to_action: Continue
+first_page:
+  title: First page

@@ -1,1 +1,16 @@
-.idea
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+
+# Tool caches
+.ruff_cache/
+.pytest_cache/
+
+# IDE metadata
+.idea/
+
+# Environment variables
+.env
