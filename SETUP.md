@@ -59,8 +59,8 @@ latter is the Dockerfile's variant, which skips the dev tools (pytest, Ruff).
 Each of these should pass on a fresh setup:
 
 ```zsh
-poetry run pytest          # 1 passed - the /health contract test
-poetry run ruff check .    # clean
+poetry run pytest          
+poetry run ruff check .    
 docker build -t <project> .
 docker run -p 8000:8000 --rm <project>
 ```
