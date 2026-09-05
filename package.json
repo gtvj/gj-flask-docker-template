@@ -1,0 +1,11 @@
+{
+  "name": "gj-flask-docker-template",
+  "private": true,
+  "devDependencies": {
+    "prettier": "^3.9.6"
+  },
+  "scripts": {
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  }
+}

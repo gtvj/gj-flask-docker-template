@@ -14,6 +14,7 @@ New clone? See [SETUP.md](SETUP.md) first.
 
 - Docker - for the containerised workflow (recommended), **or**
 - Python 3.11+ and Poetry - for local development and tooling
+- Node.js and npm - only needed to run Prettier on `static/`
 
 ## Local development with Docker
 
@@ -68,9 +69,11 @@ interactive debugger; no gunicorn involved.
 ## Development commands
 
 ```zsh
-poetry run ruff format .   # format
-poetry run ruff check .    # lint
+poetry run ruff format .   # format (Python)
+poetry run ruff check .    # lint (Python)
 poetry run pytest          # tests
+npm run format             # format (static/)
+npm run format:check       # check static/ formatting, no writes
 ```
 
 ## Health check
