@@ -1,0 +1,8 @@
+node_modules/
+static/dist/
+poetry.lock
+package-lock.json
+
+# Jinja templates - Prettier's HTML parser doesn't understand Jinja tags
+# and will mangle them (e.g. collapsing {% block %} onto one line).
+templates/

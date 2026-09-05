@@ -49,18 +49,23 @@ doing anything you care about.
 
 ```zsh
 poetry install
+npm install
 ```
 
 Note: plain `poetry install`, **not** `poetry install --only main` - the
 latter is the Dockerfile's variant, which skips the dev tools (pytest, Ruff).
+
+`npm install` only pulls in Prettier, for formatting `static/`; the app
+doesn't depend on it at runtime.
 
 ## 5. Verify
 
 Each of these should pass on a fresh setup:
 
 ```zsh
-poetry run pytest          
-poetry run ruff check .    
+poetry run pytest
+poetry run ruff check .
+npm run format:check
 docker build -t <project> .
 docker run -p 8000:8000 --rm <project>
 ```
