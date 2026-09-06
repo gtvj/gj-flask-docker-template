@@ -14,7 +14,8 @@ New clone? See [SETUP.md](SETUP.md) first.
 
 - Docker - for the containerised workflow (recommended), **or**
 - Python 3.11+ and Poetry - for local development and tooling
-- Node.js and npm - only needed to run Prettier on `static/`
+- Node.js and npm - only needed to run Prettier and ESLint on `static/`
+  (ESLint 10 requires Node.js `^20.19.0 || ^22.13.0 || >=24`)
 
 ## Local development with Docker
 
@@ -74,7 +75,13 @@ poetry run ruff check .    # lint (Python)
 poetry run pytest          # tests
 npm run format             # format (static/)
 npm run format:check       # check static/ formatting, no writes
+npm run lint               # lint (.js and .mjs)
+npm run lint:fix           # lint and auto-fix what ESLint can
 ```
+
+Prettier owns formatting, ESLint owns correctness. ESLint's core formatting
+rules are deprecated and no longer in `eslint:recommended`, so the two don't
+collide and `eslint-config-prettier` isn't needed.
 
 ## Health check
 
@@ -85,7 +92,7 @@ contract.
 
 ## Logs
 
-gunicorn writes boot/errors *and* per-request access logs to
+gunicorn writes boot/errors _and_ per-request access logs to
 stdout/stderr (`accesslog = "-"` in `gunicorn.conf.py`), so:
 
 ```zsh
