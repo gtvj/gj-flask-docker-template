@@ -9,11 +9,11 @@ fresh history with no link back to the template.
 
 ## 2. Rename the project
 
-In `README.md` update: 
+In `README.md` update:
 
 - `[Project name]`
 
-In `README.md` abd `SETUP.md` update: 
+In `README.md` abd `SETUP.md` update:
 
 - all instances of `<project>`
 
@@ -55,8 +55,8 @@ npm install
 Note: plain `poetry install`, **not** `poetry install --only main` - the
 latter is the Dockerfile's variant, which skips the dev tools (pytest, Ruff).
 
-`npm install` only pulls in Prettier, for formatting `static/`; the app
-doesn't depend on it at runtime.
+`npm install` only pulls in Prettier and ESLint, for formatting and linting
+`static/`; the app doesn't depend on either at runtime.
 
 ## 5. Verify
 
@@ -66,6 +66,7 @@ Each of these should pass on a fresh setup:
 poetry run pytest
 poetry run ruff check .
 npm run format:check
+npm run lint
 docker build -t <project> .
 docker run -p 8000:8000 --rm <project>
 ```

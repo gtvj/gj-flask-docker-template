@@ -1,5 +1,5 @@
 :root {
-    /*
+  /*
 
     Convention for primitive naming allows for up to seven variants:
 
@@ -13,24 +13,23 @@
 
     */
 
-    --primitive-black-base: #0b1112;
-    --primitive-grey-base: #e9ebe4;
+  --primitive-black-base: #0b1112;
+  --primitive-grey-base: #e9ebe4;
 
-    /*
+  /*
 
     Our colours use the primitives
 
     */
 
-    --base-font-size: 1.3rem;
+  --base-font-size: 1.3rem;
 
-    --main-background-color: var(--primitive-black-base);
-    --main-foreground-color: var(--primitive-grey-base);
-
+  --main-background-color: var(--primitive-black-base);
+  --main-foreground-color: var(--primitive-grey-base);
 }
 
 body {
-    background: var(--main-background-color);
-    color: var(--main-foreground-color);
-    font-size: var(--base-font-size);
+  background: var(--main-background-color);
+  color: var(--main-foreground-color);
+  font-size: var(--base-font-size);
 }
